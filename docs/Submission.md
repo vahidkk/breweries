@@ -1,5 +1,7 @@
 # Submission Notes
-
+###
+Demo : The app is deployed here :https://breweries-xi.vercel.app/
+###
 Since it's not a good idea to show all the breweries (hundreds of them!) in the first page and there should be a pagination, I thought using an infinite scrolling load approach would work for this project. In terms of UX, letting users load more data by scrolling down would be more pleasant than providing a lot of page numbers at the bottom of the page . I have done many projects with the SWR fetching library (by vercel) in the past and here I'm trying to demonstrate the infinite loading feature of this great library. To be able to infinite load based on scrolling down, I also used react-infinite-scroll-component library .I created a custom hook ( ./src/hook/useInfinitePagination) to be able to create fetching batches every time a user scrolls down.
 Each time a user scrolls down to load more data, a new batch of 35 items will be pushed into the data array, so we need to map the data twice, once for accessing all batches and once for accessing items inside each batches.
 
